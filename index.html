@@ -133,6 +133,15 @@
       <h1 style="margin-bottom:0;">학생 점수 그래프 뷰어</h1>
       <span style="font-size:1rem; color:#898; font-weight:400; margin-bottom:2px; white-space:nowrap;">made by 훈장님</span>
     </div>
+    <div style="background:#f8f9fa; border-radius:8px; padding:16px; margin-bottom:24px; font-size:0.95rem; line-height:1.5; color:#555;">
+      <h3 style="margin:0 0 12px 0; color:#2d3a4a; font-size:1.1rem;">📌 사용 방법</h3>
+      <ol style="margin:0; padding-left:20px;">
+        <li>엑셀 파일을 업로드해주세요. (반, 번호, 성명, 점수 데이터가 포함된 파일)</li>
+        <li>반을 선택한 후, 학생을 선택하면 해당 학생의 점수 그래프가 표시됩니다.</li>
+        <li>꺾은선 그래프(과정중심)와 레이더 차트(결과중심) 중 원하는 형태로 전환할 수 있습니다.</li>
+        <li>'반 평균 표시' 체크박스를 통해 반 평균 점수도 함께 확인할 수 있습니다.</li>
+      </ol>
+    </div>
     <div class="upload-section">
       <label for="file-input" class="upload-label">엑셀 파일 업로드</label>
       <input type="file" id="file-input" accept=".xlsx,.xls" />
@@ -147,8 +156,8 @@
     <div class="student-list" id="student-list"></div>
     <div class="chart-section" id="chart-section" style="display:none;">
       <div class="chart-mode-toggle">
-        <button class="mode-btn selected" id="line-btn">꺾은선 그래프</button>
-        <button class="mode-btn" id="radar-btn">레이더 차트</button>
+        <button class="mode-btn selected" id="line-btn">꺾은선 그래프(과정중심)</button>
+        <button class="mode-btn" id="radar-btn">레이더 차트(결과중심)</button>
         <label style="margin-left:18px; display:flex; align-items:center; gap:4px; font-size:0.98rem;">
           <input type="checkbox" id="avg-toggle" style="accent-color:#ffb300; width:16px; height:16px;"> 반 평균 표시
         </label>
