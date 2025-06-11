@@ -136,7 +136,7 @@
     <div style="background:#f8f9fa; border-radius:8px; padding:16px; margin-bottom:24px; font-size:0.95rem; line-height:1.5; color:#555;">
       <h3 style="margin:0 0 12px 0; color:#2d3a4a; font-size:1.1rem;">📌 사용 방법</h3>
       <ol style="margin:0; padding-left:20px;">
-        <li>엑셀 파일을 업로드해주세요. (반, 번호, 성명, 점수 데이터가 포함된 파일)</li>
+        <li>엑셀 파일을 업로드해주세요. (반, 번호, 이름/성명, 점수 데이터가 포함된 파일)</li>
         <li>반을 선택한 후, 학생을 선택하면 해당 학생의 점수 그래프가 표시됩니다.</li>
         <li>꺾은선 그래프(과정중심)와 레이더 차트(결과중심) 중 원하는 형태로 전환할 수 있습니다.</li>
         <li>'반 평균 표시' 체크박스를 통해 반 평균 점수도 함께 확인할 수 있습니다.</li>
@@ -196,7 +196,7 @@
       const header = json[0].map(h => String(h).trim());
       const classIdx = header.findIndex(h => h === '반');
       const numIdx = header.findIndex(h => h === '번호');
-      const nameIdx = header.findIndex(h => h === '성명');
+      const nameIdx = header.findIndex(h => h === '성명' || h === '이름');
       // 점수 데이터는 '반', '번호', '성명'을 제외한 모든 컬럼
       const scoreIdxs = header.map((h, i) => (i !== classIdx && i !== numIdx && i !== nameIdx ? i : -1)).filter(i => i !== -1);
 
